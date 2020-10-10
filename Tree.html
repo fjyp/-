@@ -3,8 +3,8 @@
  <HEAD>
   <TITLE> Student ZTREE </TITLE>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <link rel="stylesheet" href="./CSS/css/diy.css" type="text/css">
-  <link rel="stylesheet" href="./CSS/css/zTreeStyle/zTreeStyle.css" type="text/css">
+  <link rel="stylesheet" href="./CSS/diy.css" type="text/css">
+  <link rel="stylesheet" href="./CSS/zTreeStyle/zTreeStyle.css" type="text/css">
   <script type="text/javascript" src="./JS/jquery-1.4.4.min.js"></script>
   <script type="text/javascript" src="./JS/jquery.ztree.all.js"></script>
   <script type="text/javascript" src="./JS/set.js"></script>
@@ -31,6 +31,17 @@
         })
     })
 </script>
+ <script>
+    $(document).ready(function(){
+        $("#update").click(function(){
+            var flag = updateInfo();
+            if(flag == -1)
+                $("#Information").val("format error!");
+            if(flag == 0)
+                $("#Information").val("success!");
+        })
+    })
+</script>
  </HEAD>
 
 
@@ -38,6 +49,7 @@
  <textarea id="Information" cols = "20" rows="5" 
  placeholder="单击叶节点获取学生发展经历" style = "resize: none;"></textarea>
  <div id="Box"></div>
+ <button id="update">Update Student Information</button>
  <button id="button">Creat the tree</button>
  <textarea id="textbox" cols="40" rows="7"
  placeholder="导师：张三
@@ -51,10 +63,10 @@
  李二：字节跳动、京东云" style = "resize:none">
 </textarea>
  <div id="tip">
-     ★输入格式见文本域提示内容 <br>
-     ★输入不同树之间空一行<br>
-     ★注意最后删去多余换行符 <br>
-     ★每一次生成前请刷新<br><br>
+     1.输入格式见文本域提示内容 <br>
+     2.每位学生都必须输入技能或工作经历<br>
+     3.学生的姓名不能重复<br>
+     4.每一次生成树前都需要刷新<br><br>
  </div>
  <!-- 设定最多展示4棵树 -->
  <div id=treediv1 class="treed">

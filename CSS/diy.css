@@ -56,6 +56,7 @@
     margin-left: 5%;
     color: rgb(192, 171, 171);
 }
+
 #tip{
     position: fixed;
     top: 3.5%;
@@ -68,13 +69,40 @@
     position: fixed;
     top:5px;
     left: 2.5%;
-    width: 72%;
+    width: 63%;
     height:11%;
     opacity: 0.5;
     border:5px solid rgb(83, 80, 73);
     box-shadow:5px,5px,5px gray;
     z-index: -2;
 
+}
+#update{
+    position: fixed;
+    top: 5px;
+    left: 67.3%;
+    width: 8%;
+    height: 13%;
+    font-family: "Matura MT Script Capitals";
+    font-size: 13px;
+
+}
+update{
+    display: inline-block;
+    border:solid 0px;
+    outline:none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color:rgb(239, 232, 247);
+    background-color: rgb(50, 62, 223);
+    border-radius: 20px;
+    box-shadow:3px 3px 2px rgb(179, 178, 178);
+}
+update{
+    color:rgb(67, 50, 223);
+    background-color:deepskyblue;
 }
 #textbox{
     padding: 20px;
@@ -131,7 +159,7 @@
     right:3.6%;
     bottom:19%; 
 }
-#Refresh:hover{
+#Reload:hover{
     cursor: pointer;
 }
 #stxt{
