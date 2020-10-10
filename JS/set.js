@@ -140,6 +140,24 @@ function teacherNum(){
         treeNum[n]=Arr.length;
 }
 
+function updateInfo(){
+        intarea=$("#Information").val();
+        var index = intarea.indexOf("\：");
+        if(index == -1)
+            return -1;
+        var bf = intarea.substring(0,index);
+        for(var i = 0;i < Arr.length;i++){
+            if(Arr[i].includes(bf)){
+                Arr[i] = intarea;
+                break;
+            }
+        }
+        if(i == Arr.length)
+            return -1;
+        else
+            return 0;
+}
+
 function moveplace(){
     if(n==1){
         $("#treediv1").removeClass("treed");
